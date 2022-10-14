@@ -1,12 +1,13 @@
-import NameInput from "../components/NameInput"
 import Title from "../components/Title"
 import { $ } from "../utils/$"
+import { cleanMainAndPrintPage } from "../utils/cleanMainAndPrintPage"
+import Hub from "./Hub"
 
 const app = $('#app')
 
 const Home = () => {
     app.innerHTML += `
-      <main>
+      <main class="home">
       <h1>HUB-GAMES</h1> 
         <form>
             <label for="name">
@@ -18,12 +19,15 @@ const Home = () => {
       </main>
       
     `
-    const input = $('.name')
+    const input = $('#name')
+    console.log(input)
     const form = $('form')
     form.addEventListener('submit', (evt) => {
         evt.preventDefault()
         window.localStorage.setItem('name', JSON.stringify(input.value))
         input.value = ''
+        cleanMainAndPrintPage(Hub, 'hub')
+
     })
                   
 }

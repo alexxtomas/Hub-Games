@@ -1,36 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.color-1 {
-  background-color: #e64980;
-}
-
-.color-2 {
-  background-color: #fab005;
-}
-
-.color-3 {
-  background-color: #82C91E;
-}
-
-.color-4 {
-  background-color: #4C6EF5;
-}
-
-.color-5 {
-  background-color: #15AABF;
-}
-
-.color-6 {
-  background-color: #FA5252;
-}
-
-.color-7 {
-  background-color: #BE4BDB;
-}
-
-.color-8 {
-  background-color: #7950F2;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 
 /* Reset  */
 * {
@@ -43,14 +11,18 @@ body {
   background-color: #e64980;
   color: #fff;
   font-family: 'Bebas Neue', cursive;
+  /* overflow: hidden; */
 
 }
 
+
+/* Color Mode */
 .color-mode-container {
-  height: 6vh;
+  height: 5vh;
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
-  width: 100vw;
+  width: 100%;
 
 }
 
@@ -62,15 +34,8 @@ body {
   padding: 5px;
 }
 
-
-/* 
-.fa-palette {
-  display: block;
-  margin: auto 0;
-} */
-
-
-main {
+/* Home  */
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,12 +46,11 @@ main {
 
 h1 {
   font-size: 100px;
+  text-align: center;
 }
 
 label {
   font-size: 40px;
-
-
 }
 
 h1,
@@ -101,6 +65,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: center;
 }
 
 #name {
@@ -111,7 +76,8 @@ form {
   border: 2px solid #fff;
   cursor: auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .name-button {
@@ -123,4 +89,74 @@ form {
   text-align: center;
   cursor: pointer;
   background-color: #fff;
+}
+
+/* Hub  */
+.hub {
+  width: 90vw;
+  height: 830px;
+  display: grid;
+  grid-template-columns: 350px 1fr 350px;
+  grid-template-rows: 50px repeat(3, 1fr);
+  grid-template-areas:
+    "welcome welcome welcome"
+    "noughts-and-crosses  . waka-topo"
+    "memory-game . hang-man"
+    "pokeapi . quiz-neo"
+  ;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.welcome {
+  letter-spacing: 5px;
+  font-family: 'Roboto', sans-serif;
+  grid-area: welcome;
+  text-align: center;
+  font-size: 30px;
+}
+
+.hub div {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  transition: all 0.6s ease-in-out;
+}
+
+.hub div:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.noughts-and-crosses {
+  grid-area: noughts-and-crosses;
+  background-color: #fab005;
+}
+
+.waka-topo {
+  grid-area: waka-topo;
+  background-color: #15aabf;
+}
+
+.memory-game {
+  grid-area: memory-game;
+  background-color: #82c91e;
+}
+
+.hang-man {
+  grid-area: hang-man;
+  background-color: #be4bdb;
+}
+
+.pokeapi {
+  grid-area: pokeapi;
+  background-color: #fa5252;
+}
+
+.quiz-neo {
+  grid-area: quiz-neo;
+  background-color: #fd7e14;
 }
