@@ -188,6 +188,7 @@ form {
   width: 90%;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   text-align: center;
@@ -211,9 +212,11 @@ form {
 .answers ol {
   list-style: lower-alpha;
   display: flex;
-  gap: 22 0px;
   flex-wrap: wrap;
-
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -251,6 +254,29 @@ form {
   font-size: 40px;
   height: 60px;
   background-color: #fd7e14;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.next:hover {
+  scale: 1.05;
+
+}
+
+.return-hub,
+.try-again {
+  all: unset;
+  cursor: pointer;
+  border: 2px solid #000;
+  width: 200px;
+  background-color: #fd7e14;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.return-hub:hover,
+.try-again:hover {
+  scale: 1.1;
 }
 
 @media (min-width: 1200px) {

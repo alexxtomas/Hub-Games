@@ -21,8 +21,8 @@
         {
             "id": 4,
             "question": "Where were the Winter Olympics held?",
-            "answers": ["Beijing, China", "New York, EEUU", "Barcelona, Spain", "Tokyo, Japan"],
-            "correctAnswer": "Beijing, China"
+            "answers": ["Beijing - China", "New York - EEUU", "Barcelona - Spain", "Tokyo - Japan"],
+            "correctAnswer": "Beijing - China"
         },
         {
             "id": 5,

@@ -9,12 +9,12 @@ import { getName } from "../utils/getName"
 const app = $('#app')
 
  const QuizNeo =  async () => {
-   cleanApp()
+    cleanApp()
     const user = getName()
     let index = 0
     const questions = await quiz.getAllQuestions()
     const {question, answers} = questions[index]
-    app.innerHTML += `
+    app.innerHTML = `
     <main class="quiz-neo-game">
       <h2 class="welcome">Hi ${user}! Welcome to QuizNeo</h2>
       <div class="question"></div>
@@ -23,15 +23,14 @@ const app = $('#app')
 
     `
     QuestionAndAnswers(question, answers)
+    let well = []
     document.addEventListener('click', (evt) => {
       const {id} = evt.target
       if(id === '0' || id === '1' ||id === '2' ||id === '3') {
          const answered = evt.target.innerText
-         let well = questions[index].correctAnswer === answered ? true : false
-         QuestionResult(well)
+         well[index] = questions[index].correctAnswer === answered ? true : false
          index += 1
-
-
+         QuestionResult(well, questions, index)
       }
 
     })
