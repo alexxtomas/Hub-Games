@@ -1,17 +1,17 @@
-import Title from "../components/Title"
 import { $ } from "../utils/$"
-import { cleanMainAndPrintPage } from "../utils/cleanMainAndPrintPage"
+import { cleanApp } from "../utils/cleanApp"
 import Hub from "./Hub"
 
 const app = $('#app')
 
 const Home = () => {
+    // cleanApp()
     app.innerHTML += `
       <main class="home">
       <h1>HUB-GAMES</h1> 
         <form>
             <label for="name">
-            Introduce tu nombre
+            Introduce your name
             </label>
             <input id="name" type="text" autocomplete="off">
             <button class="name-button">👍🏻</button>
@@ -20,13 +20,16 @@ const Home = () => {
       
     `
     const input = $('#name')
-    console.log(input)
     const form = $('form')
     form.addEventListener('submit', (evt) => {
         evt.preventDefault()
+        if(input.value === '' ||input.value === undefined ||input.value.length < 3) alert('Please introduce a valid name')
+        else {
         window.localStorage.setItem('name', JSON.stringify(input.value))
+        Hub()
+        }
+          
         input.value = ''
-        cleanMainAndPrintPage(Hub, 'hub')
 
     })
                   

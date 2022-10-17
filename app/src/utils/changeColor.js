@@ -9,8 +9,5 @@ export const changeColor = () => {
 
     if(backgroundColor === colors[randomIndex]) while(backgroundColor === colors[randomIndex]) randomIndex = Number.parseInt(Math.random() * (colors.length + 1))
     body.style ['background-color'] = colors[randomIndex]
-        
-    
-    
 }
 
