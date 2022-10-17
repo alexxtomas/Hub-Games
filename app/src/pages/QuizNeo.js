@@ -5,7 +5,6 @@ import { $ } from "../utils/$"
 import { cleanApp } from "../utils/cleanApp"
 import { getName } from "../utils/getName"
 
-
 const app = $('#app')
 
  const QuizNeo =  async () => {
@@ -34,18 +33,6 @@ const app = $('#app')
       }
 
     })
-   
-
  }
-
-//  ${questions[0].question}
-
-//  <ol>
-//          <li id="a">${questions[0].answers[0]}</li>
-//          <li id="b">${questions[0].answers[1]}</li>
-//          <li id="c">${questions[0].answers[2]}</li>
-//          <li id="d">${questions[0].answers[3]}</li>
-//       </ol>  
-
  export default QuizNeo
 

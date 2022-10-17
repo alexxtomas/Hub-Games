@@ -9,7 +9,7 @@ const QuestionAndAnswers = (question, answers) => {
     const questionContainer = $('.question')
     const answersContainer = $('.answers')
 
-    questionContainer.innerHTML = question
+    questionContainer.innerHTML = `<span>${question}</span>` 
     const answersHTML = `
         <ol>
             ${answers.map((a, i) => `<li id="${i}">${a}</li>`)}

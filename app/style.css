@@ -279,6 +279,8 @@ form {
   scale: 1.1;
 }
 
+
+
 @media (min-width: 1200px) {
   .hub {
     width: 70vw
@@ -322,4 +324,28 @@ form {
     font-size: 20px;
   }
 
+}
+
+@media (max-width: 900px) {
+  .question span {
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+
+  .answers {
+    height: 400px;
+    width: 95%;
+  }
+
+  .answers ol {
+    width: 80%;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .answers ol li {
+    font-size: 28px;
+  }
 }
