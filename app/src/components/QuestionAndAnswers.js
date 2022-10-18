@@ -2,10 +2,6 @@ import { $ } from "../utils/$"
 import { removeComas } from "../utils/removeComas"
 
 const QuestionAndAnswers = (question, answers) => {
-
-    if(question === undefined || answers === undefined ) {
-        
-    }
     const questionContainer = $('.question')
     const answersContainer = $('.answers')
 

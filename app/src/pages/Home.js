@@ -5,7 +5,7 @@ import Hub from "./Hub"
 const app = $('#app')
 
 const Home = () => {
-    // cleanApp()
+    window.localStorage.clear()
     app.innerHTML += `
       <main class="home">
       <h1>HUB-GAMES</h1> 
